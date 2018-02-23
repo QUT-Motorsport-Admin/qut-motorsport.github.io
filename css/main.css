@@ -1,0 +1,199 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #FAFAFA;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.nav {
+  background-color: #FAFAFA;
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 1.6rem;
+}
+.nav .navTitle {
+  line-height: 60px;
+  float: right;
+  font-size: 2rem;
+}
+.nav .navLogo {
+  height: 40px;
+  margin: 10px;
+  margin-left: 0px;
+  float: left;
+}
+.nav .left {
+  float: left;
+}
+.nav .right {
+  float: right;
+}
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  /* Change this in order to change the Dropdown symbol */
+  /* Hide Dropdowns by Default */
+}
+.nav ul li > a:after {
+  content: ' +';
+}
+.nav ul li > a:only-child:after {
+  content: '';
+}
+.nav ul li {
+  display: inline-block;
+  /* Display Dropdowns on Hover */
+}
+.nav ul li a {
+  padding: 0 20px;
+  line-height: 60px;
+}
+.nav ul li:hover > ul {
+  display: inherit;
+}
+.nav ul ul {
+  display: none;
+  position: absolute;
+  top: 60px;
+  /* the height of the main nav */
+  -webkit-box-shadow: 0px 10px 66px -26px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 0px 10px 66px -26px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 10px 66px -26px rgba(0, 0, 0, 0.55);
+  /* First Tier Dropdown */
+  /* Second, Third and more Tiers	*/
+}
+.nav ul ul li {
+  float: none;
+  display: list-item;
+  position: relative;
+  background-color: #FAFAFA;
+  border-left: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+}
+.nav ul ul li:last-child {
+  border-bottom: 1px solid #e1e1e1;
+}
+.nav ul ul li a {
+  line-height: initial !important;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.nav a {
+  line-height: initial;
+  display: block;
+  padding: 10px;
+  color: #191C21;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.nav a:hover {
+  background-color: #e1e1e1;
+}
+.jumbo {
+  width: 100%;
+  min-height: 100px;
+  background: #00A0DF;
+  background: -webkit-linear-gradient(to right, #00A0DF, #003246);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00A0DF, #003246);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.jumbo.half {
+  height: 50vh;
+}
+.jumbo.third {
+  height: 33vh;
+}
+.jumbo.twothirds {
+  height: 66vh;
+}
+.jumbo .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.jumbo .jumbo-center {
+  min-height: 10px;
+}
+.content {
+  width: 100%;
+  min-height: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.sub-footer {
+  background-color: #454d5b;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+.sub-footer a {
+  display: block;
+  color: #FAFAFA;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  padding: 20px;
+}
+.sub-footer a:hover {
+  background-color: #5b6678;
+}
+.footer {
+  background-color: #191C21;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer .footer-div {
+  border-left: 1px solid #454d5b;
+}
+.footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+.footer ul li {
+  display: block;
+  padding: 10px;
+}
+.footer ul li a {
+  line-height: initial;
+  display: block;
+  color: #FAFAFA;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+}
+.footer ul li a:hover {
+  text-decoration: underline;
+}

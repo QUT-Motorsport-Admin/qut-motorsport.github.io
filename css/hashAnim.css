@@ -1,0 +1,143 @@
+.hash {
+    animation: 2s linear infinite;
+}
+
+.Layer_1 {
+    animation-name: layer1;
+}
+
+.Layer_2 {
+    animation-name: layer2;
+}
+
+.Layer_3 {
+    animation-name: layer3;
+}
+
+.Layer_4 {
+    animation-name: layer4;
+}
+
+.Layer_5 {
+    animation-name: layer5;
+}
+
+@keyframes layer1 {
+    0% {
+        fill: #b2b2b2;
+    }
+    17% {
+        fill: #4b4b4b;
+    }
+    33% {
+        fill: #b2b2b2;
+    }
+    50% {
+        fill: #b2b2b2;
+    }
+    67% {
+        fill: #b2b2b2;
+    }
+    83% {
+        fill: #b2b2b2;
+    }
+    100% {
+        fill: #b2b2b2;
+    }
+}
+
+@keyframes layer2 {
+    0% {
+        fill: #b2b2b2;
+    }
+    17% {
+        fill: #b2b2b2;
+    }
+    33% {
+        fill: #4b4b4b;
+    }
+    50% {
+        fill: #b2b2b2;
+    }
+    67% {
+        fill: #b2b2b2;
+    }
+    83% {
+        fill: #b2b2b2;
+    }
+    100% {
+        fill: #b2b2b2;
+    }
+}
+
+@keyframes layer3 {
+    0% {
+        fill: #b2b2b2;
+    }
+    17% {
+        fill: #b2b2b2;
+    }
+    33% {
+        fill: #b2b2b2;
+    }
+    50% {
+        fill: #4b4b4b;
+    }
+    67% {
+        fill: #b2b2b2;
+    }
+    83% {
+        fill: #b2b2b2;
+    }
+    100% {
+        fill: #b2b2b2;
+    }
+}
+
+@keyframes layer4 {
+    0% {
+        fill: #b2b2b2;
+    }
+    17% {
+        fill: #b2b2b2;
+    }
+    33% {
+        fill: #b2b2b2;
+    }
+    50% {
+        fill: #b2b2b2;
+    }
+    67% {
+        fill: #4b4b4b;
+    }
+    83% {
+        fill: #b2b2b2;
+    }
+    100% {
+        fill: #b2b2b2;
+    }
+}
+
+@keyframes layer5 {
+    0% {
+        fill: #b2b2b2;
+    }
+    17% {
+        fill: #b2b2b2;
+    }
+    33% {
+        fill: #b2b2b2;
+    }
+    50% {
+        fill: #b2b2b2;
+    }
+    67% {
+        fill: #b2b2b2;
+    }
+    83% {
+        fill: #4b4b4b;
+    }
+    100% {
+        fill: #b2b2b2;
+    }
+}

@@ -1,0 +1,123 @@
+// Navbar LESS
+@import "./variables.less";
+
+@navbarHeight: 60px;
+@navbarLinkWidth: 20px;
+
+// Top Level Navbar element
+.nav {
+    background-color: @colour-light;
+    width: 100%;
+    height: @navbarHeight;
+    box-sizing: border-box;
+    border-bottom: 1px solid darken(@colour-light, 10%);
+    font-size: 1.6rem;
+    
+    // Main
+    .navTitle {
+        line-height: @navbarHeight;
+        float: right;
+        font-size: 2rem;
+    }
+
+    .navLogo {
+        height: @navbarHeight - 20px;
+        margin-left: 0px;
+        margin: 10px;
+        margin-left: 0px;
+        float: left;
+    }
+
+    // Spaces content 
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    // Elements for handling the links and dropdown elements
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+
+        /* Change this in order to change the Dropdown symbol */
+        li > a:after { content:  ' +'; }
+        li > a:only-child:after { content: ''; }
+
+        li {
+            display:inline-block;
+            // background-color: #E64A19;
+
+            a {
+                padding: 0 @navbarLinkWidth;
+                line-height: @navbarHeight;
+            }
+
+            /* Display Dropdowns on Hover */
+            &:hover > ul {
+                display:inherit;
+            }
+        }
+
+        /* Hide Dropdowns by Default */
+        ul {
+            display: none;
+            position: absolute; 
+            top: @navbarHeight; /* the height of the main nav */
+
+            -webkit-box-shadow: 0px 10px 66px -26px rgba(0, 0, 0, 0.55);
+            -moz-box-shadow: 0px 10px 66px -26px rgba(0, 0, 0, 0.55);
+            box-shadow: 0px 10px 66px -26px rgba(0, 0, 0, 0.55);
+
+            /* First Tier Dropdown */
+            li {
+                // width:170px;
+                float:none;
+                display:list-item;
+                position: relative;
+                background-color: @colour-light;
+                border-left: 1px solid darken(@colour-light, 10%);
+                border-right: 1px solid darken(@colour-light, 10%);
+
+                &:last-child {
+                    border-bottom: 1px solid darken(@colour-light, 10%);
+                }
+                 
+                a {
+                    line-height: initial !important;
+                    padding-top: @navbarHeight / 4;
+                    padding-bottom: @navbarHeight / 4;
+                }
+            }
+
+            /* Second, Third and more Tiers	*/
+            // ul li {
+            //     position: relative;
+            //     top:0px; 
+            //     left:170px;
+
+            //     a {
+            //         line-height: initial !important;
+            //     }
+            // }
+        }
+    }
+
+    // Each of the nav elements
+    a {
+        line-height: initial;
+        display:block;
+        padding:10px;	
+        color: @colour-dark;
+        text-decoration: none;
+        box-sizing: border-box;
+
+        &:hover { 
+            background-color: darken(@colour-light, 10%);
+        }
+    }
+}
