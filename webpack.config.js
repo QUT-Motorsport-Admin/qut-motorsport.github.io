@@ -7,7 +7,7 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin ({
 });
 
 module.exports = {
-  entry: __dirname + '/tsx/index.tsx',
+  entry: __dirname + '/index.tsx',
   module: {
     rules: [ 
       {
