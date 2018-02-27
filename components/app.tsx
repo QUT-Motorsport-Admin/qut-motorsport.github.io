@@ -15,8 +15,8 @@ export default class App extends React.Component<{}, { html: String|undefined }>
     }
     
     // When the component loads, fetch the string URL, and set the this.state.html with the return
-    componentDidMount(){mdHelp.convert("../config/home.header.md", this.setHtml)}
-    // SetHTML wrapper
+    componentDidMount(){mdHelp.fetch("../config/home.header.md", this.setHtml)}
+    // SetHTML wrapper, annoymised function (Arrow function), its the reason it works
     setHtml = (_html) => this.setState({html: _html});
 
     render(){
