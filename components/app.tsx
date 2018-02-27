@@ -1,9 +1,6 @@
 import * as React from 'react';
 import * as showdown from 'showdown';
 
-//import the page set up object
-import homepageConfig from '../config/pages'
-
 export default class App extends React.Component <{}> {
 
 componentDidMount(){
@@ -11,8 +8,6 @@ componentDidMount(){
 }
 
 render(){
-  //attempting to populate the innerhtml of the page element from a md file.
-  //currently not rendering the md's html even though populate return the correct data.
   return(
     <div>
       <div>test</div>
@@ -21,8 +16,6 @@ render(){
   );
 }
 
-//gets the contents on a md file, turns it into HTML and returns it.
-//
   populate(): any{
     console.log("populate() ran");
     var xhttp = new XMLHttpRequest();
@@ -35,8 +28,6 @@ render(){
           var converter = new showdown.Converter(); 
           var MDasHTML = converter.makeHtml(this.responseText).toString();
           console.log("This is the HTML output:"+ MDasHTML);
-          //this console log prints the correct html, I can copypaste the output of this print into the above dangerouslySetInnerHTML and it works fine.
-          //Not sure why the object isn't being passed correctly. 
           if(MDasHTML && xhttp.responseText){
              return(MDasHTML); 
           }  
