@@ -5,6 +5,12 @@ import * as showdown from 'showdown';
 import homePageConfig from '../config/home.config';
 import mdHelp from "./helpers/mdHelp";
 
+// Page Elements
+import Navbar from "./components/Navbar";
+import Jumbo from "./components/Jumbo";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
+
 export default class App extends React.Component<{}, { html: String|undefined }> {
 
     constructor(props) {
@@ -23,8 +29,14 @@ export default class App extends React.Component<{}, { html: String|undefined }>
         // Decide what to display, incase the fetch is slow
         const content = this.state.html ? this.state.html : <div>REACT APP! Loading MD...</div>
         return(
-            // Render what ever
-            <div dangerouslySetInnerHTML={mdHelp.htmlToReact(content)} />
+            <div>
+                <Navbar />
+                <Jumbo />
+                <Content>
+                    <div dangerouslySetInnerHTML={mdHelp.htmlToReact(content)} />
+                </Content>
+                <Footer />
+            </div>
         )
     }
 }
