@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as showdown from 'showdown';
 
 //import the page set up object
-import homepageConfig from '../config/pages'
+import homePageConfig from '../config/home.config';
 import mdHelp from "./helpers/mdHelp";
 
 export default class App extends React.Component<{}, { html: String|undefined }> {
@@ -15,7 +15,7 @@ export default class App extends React.Component<{}, { html: String|undefined }>
     }
     
     // When the component loads, fetch the string URL, and set the this.state.html with the return
-    componentDidMount(){mdHelp.convert("../config/home.md", this.setHtml)}
+    componentDidMount(){mdHelp.convert("../config/home.header.md", this.setHtml)}
     // SetHTML wrapper
     setHtml = (_html) => this.setState({html: _html});
 
