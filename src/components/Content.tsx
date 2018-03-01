@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import "./Content.less";
+
 export default class Content extends React.Component {
 
     constructor(props) {

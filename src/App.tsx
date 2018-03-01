@@ -1,9 +1,13 @@
 import * as React from 'react';
-import * as showdown from 'showdown';
 
 //import the page set up object
 import homePageConfig from '../config/home.config';
 import mdHelp from "./helpers/mdHelp";
+
+// Styles
+import "./App.less";
+import "./Skeleton.less";
+import "./variables.less";
 
 // Page Elements
 import Navbar from "./components/Navbar";
@@ -21,9 +25,14 @@ export default class App extends React.Component<{}, { html: String|undefined }>
     }
     
     // When the component loads, fetch the string URL, and set the this.state.html with the return
-    componentDidMount(){mdHelp.fetch("../config/home.header.md", this.setHtml)}
+    componentDidMount(){ 
+        mdHelp.fetch("./config/home.header.md", this.setHtml)
+    }
     // SetHTML wrapper, annoymised function (Arrow function), its the reason it works
-    setHtml = (_html) => this.setState({html: _html});
+    setHtml = (_html) => {
+        this.setState({html: _html});
+        console.log(_html);
+    };
 
     render(){
         // Decide what to display, incase the fetch is slow

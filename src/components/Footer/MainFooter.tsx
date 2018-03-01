@@ -1,4 +1,5 @@
 import * as React from 'react';
+import "./MainFooter.less";
 
 export default class MainFooter extends React.Component {
 
@@ -8,7 +9,7 @@ export default class MainFooter extends React.Component {
 
     render(){
         return(
-            <div className="footer">
+            <div className="footer clearfix">
                 <div className="container">
                     <div className="four columns">
                         {/* <!-- All of our affiliates --> */}

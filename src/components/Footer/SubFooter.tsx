@@ -1,4 +1,5 @@
 import * as React from 'react';
+import "./SubFooter.less";
 
 export default class SubFooter extends React.Component {
 
@@ -8,7 +9,7 @@ export default class SubFooter extends React.Component {
 
     render(){
         return(
-            <div className="sub-footer">
+            <div className="sub-footer clearfix">
                 <a href="#">Facebook - New Members</a>
                 <a href="#">Facebook - Discussion</a>
                 <a href="#">Instagram</a>

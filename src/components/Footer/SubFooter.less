@@ -1,0 +1,28 @@
+//Footer LESS
+@import "./../../variables.less";
+
+@footerBorder: 20px;
+@subFooterColour: lighten(@colour-dark, 20%);
+
+.sub-footer {
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    background-color: @subFooterColour;
+
+    a {
+        color: @colour-light;
+        text-decoration: none;
+        padding: @footerBorder;
+
+        &:hover {
+            color: lighten(@colour-light, 20%);
+            background-color: @colour-dark;
+        }
+    }
+}

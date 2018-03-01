@@ -1,4 +1,5 @@
 import * as React from 'react';
+import "./Jumbo.less";
 
 export default class Jumbo extends React.Component {
 
