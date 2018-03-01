@@ -10,13 +10,13 @@ module.exports = {
     output: {
         filename: "bundle.js",
         publicPath: "/",
-        path: path.join(__dirname, "dist"),
+        path: path.join(__dirname),
         // filename: 'dist/[name].js',
         // sourceMapFilename: 'build/[name].js.map'
     },
     devtool: 'cheap-module-source-map',
     devServer: {
-        contentBase: path.join(__dirname, "dist"),
+        contentBase: path.join(__dirname),
         compress: true,
         open: true,
         progress: true,
