@@ -1,0 +1,32 @@
+@import "./variables.less";
+
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    background-color: @colour-light;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
