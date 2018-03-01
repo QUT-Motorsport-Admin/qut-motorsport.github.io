@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 //import the page set up object
-import homePageConfig from '../config/home.config';
 import mdHelp from "./helpers/mdHelp";
 
 // Styles
