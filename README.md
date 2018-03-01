@@ -22,3 +22,6 @@ Depending on what GUI/CLI your using, there will be a different set of commands/
 
 * Impliment this: https://serverless-stack.com/chapters/code-splitting-in-create-react-app.html
     * Its file spliting, it allows each page to be its own bundle. Will dramaticly decrease loading times
+
+* Impliment page transition animations: https://github.com/reactjs/react-transition-group
+    * Functionality is the most important of course, but who doesn't want some slick transition animations?
