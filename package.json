@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "node scripts/copy.js || webpack"
+    "build": "node scripts/copy.js && webpack"
   },
   "repository": {
     "type": "git",

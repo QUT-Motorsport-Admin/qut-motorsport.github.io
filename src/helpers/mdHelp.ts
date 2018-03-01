@@ -1,5 +1,5 @@
 // This is a file to read a RAW MD file form the server
-import { converter } from 'showdown';
+import * as showdown from 'showdown';
 
 export default class mdHelp {
 
@@ -20,7 +20,7 @@ export default class mdHelp {
 
     // Will convert any raw MD to HTML
     static convert(raw, callback) {
-        var converter = new converter(); 
+        var converter = new showdown.Converter(); 
         var MDasHTML = converter.makeHtml(raw).toString();
         if(MDasHTML && raw != null){
             callback(MDasHTML); 
