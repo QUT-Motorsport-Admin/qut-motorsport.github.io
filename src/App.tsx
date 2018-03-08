@@ -1,7 +1,11 @@
 import * as React from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 //import the page set up object
 import mdHelp from "./helpers/mdHelp";
+
+//import page configuration
+import siteConfig from "../config/site.config";
 
 // Styles
 import "./App.less";
@@ -18,31 +22,42 @@ export default class App extends React.Component<{}, { html: String|undefined }>
 
     constructor(props) {
         super(props);
-        this.state = {
-            html: undefined
-        };
     }
     
-    // When the component loads, fetch the string URL, and set the this.state.html with the return
-    componentDidMount(){ 
-        mdHelp.fetch("config/home.header.md", this.setHtml)
+    //Take the input config and return the respective react components to form the page content.
+    assembleContent(configComps: any){
+        return (
+            class assembledContent extends React.Component {
+                render() {
+                    return (
+                        configComps.map(config => {
+                            //When creating a new page component, and an if statment checking for the component's type here.
+                            if (config.type == "markdownDoc"){
+                                console.log(config.config);
+                                return<Content path={config.config}/>
+                            }
+                            else if (config.type == "jumbo"){
+                                return<Jumbo/>
+                            }
+                        })
+                    )
+                }
+            }
+        )
     }
-    // SetHTML wrapper, annoymised function (Arrow function), its the reason it works
-    setHtml = (_html) => {
-        this.setState({html: _html});
-        console.log(_html);
-    };
 
     render(){
-        // Decide what to display, incase the fetch is slow
-        const content = this.state.html ? this.state.html : <div>REACT APP! Loading MD...</div>
         return(
             <div>
-                <Navbar />
-                <Jumbo />
-                <Content>
-                    <div dangerouslySetInnerHTML={mdHelp.htmlToReact(content)} />
-                </Content>
+                <Router>
+                    <div>
+                        <Navbar />
+                        {siteConfig.map(config => {
+                            //create routes and their respective components from the config set out in the siteConfig file
+                            return(<Route path={config.path} component={this.assembleContent(config.pageComponents)}/>)
+                        })}
+                    </div>
+                </Router>
                 <Footer />
             </div>
         )

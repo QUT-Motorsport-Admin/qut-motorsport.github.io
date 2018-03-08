@@ -14,7 +14,7 @@ export default class Jumbo extends React.Component {
                     <div className="six columns">
                         <h1 className="title">QUT Motorsport</h1>
                         <hr />
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta lacus nisl, et imperdiet ante vehicula vitae. Sed eu ipsum nibh. Nunc aliquam fermentum consequat. </p>
+                        <p>QUT's fastest <del>growing</del> club.</p>
                     </div>
                     <div className="six columns">
                             
