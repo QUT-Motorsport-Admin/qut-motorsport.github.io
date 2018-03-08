@@ -3,7 +3,7 @@ import homePage from "./home.config";
 const pagesConfig: IPageConfig[] = [
     {
         id: homePage.id,
-        name: homePage.name,
+        name: homePage.title,
         url: "./home.config"
     }
 ]
