@@ -8,8 +8,9 @@ const infoPageElements: PageElement[] = [
 ];
 
 const infoPageConfig = {
-    id: "idPage",
+    id: "infoPage",
     title: "Information",
+    path: "/info",
     elements: infoPageElements     
 }
 

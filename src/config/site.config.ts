@@ -1,18 +1,25 @@
 import homePageConfig from "./home.config";
 import infoPageConfig from "./info.config";
+import testPageConfig from "./test.config";
 
 const siteConfig: Page[] = [
   {
     id: homePageConfig.id,
     title: homePageConfig.title,
-    path: "/home",
+    path: homePageConfig.path,
     pageComponents: homePageConfig.elements
   },
   {
     id: infoPageConfig.id,
     title: infoPageConfig.title,
-    path: "/info",
+    path: infoPageConfig.path,
     pageComponents: infoPageConfig.elements
+  },
+  {
+    id: testPageConfig.id,
+    title: testPageConfig.title,
+    path: testPageConfig.path,
+    pageComponents: testPageConfig.elements
   }
 ]
 

@@ -5,7 +5,7 @@ import mdHelp from "../helpers/mdHelp";
 
 import "./Content.less";
 
-export default class Content extends React.Component<{}, { html: String|undefined }>  {
+export default class Content extends React.Component<{ path: string }, { html: String|undefined }>  {
 
     constructor(props) {
         super(props);
@@ -16,7 +16,8 @@ export default class Content extends React.Component<{}, { html: String|undefine
 
     // When the component loads, fetch the string URL, and set the this.state.html with the return
     componentDidMount(){ 
-        mdHelp.fetch("config/home.header.md", this.setHtml)
+        mdHelp.fetch("config" + this.props.path, this.setHtml)
+        //mdHelp.fetch("config/home.header.md", this.setHtml)
     }
     // SetHTML wrapper, annoymised function (Arrow function), its the reason it works
     setHtml = (_html) => {

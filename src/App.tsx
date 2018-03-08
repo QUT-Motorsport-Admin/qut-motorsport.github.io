@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 //import the page set up object
 import mdHelp from "./helpers/mdHelp";
 
+//import page configuration
+import siteConfig from "./config/site.config";
+
 // Styles
 import "./App.less";
 import "./Skeleton.less";
@@ -19,30 +22,37 @@ export default class App extends React.Component<{}, { html: String|undefined }>
 
     constructor(props) {
         super(props);
-        // this.state = {
-        //     html: undefined
-        // };
     }
     
-    // When the component loads, fetch the string URL, and set the this.state.html with the return
-    // componentDidMount(){ 
-    //     mdHelp.fetch("config/home.header.md", this.setHtml)
-    // }
-    // // SetHTML wrapper, annoymised function (Arrow function), its the reason it works
-    // setHtml = (_html) => {
-    //     this.setState({html: _html});
-    //     console.log(_html);
-    // };
+    assembleContent(configComps: any){
+        return (
+            class assembledContent extends React.Component {
+                render() {
+                    return (
+                        configComps.map(config => {
+                            if (config.type == "markdownDoc"){
+                                console.log(config.config);
+                                return<Content path={config.config}/>
+                            }
+                            else if (config.type == "jumbo"){
+                                return<Jumbo/>
+                            }
+                        })
+                    )
+                }
+            }
+        )
+    }
 
     render(){
-        // Decide what to display, incase the fetch is slow
-        //const content = this.state.html ? this.state.html : <div>REACT APP! Loading MD...</div>
         return(
             <div>
                 <Router>
                     <div>
                         <Navbar />
-                        <Route path="/home" component={Content}/>
+                        {siteConfig.map(config => {
+                            return(<Route path={config.path} component={this.assembleContent(config.pageComponents)}/>)
+                        })}
                     </div>
                 </Router>
                 <Footer />

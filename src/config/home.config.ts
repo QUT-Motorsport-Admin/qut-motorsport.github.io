@@ -2,6 +2,9 @@ import { PageElement } from "./site.config";
 
 const homePageElements: PageElement[] = [
     {
+      type: 'jumbo'
+    },
+    {
       type: 'markdownDoc',
       config: '/home.header.md'
     }
@@ -11,6 +14,7 @@ const homePageElements: PageElement[] = [
 const homePageConfig = {
     id: "homePage",
     title: "Home",
+    path: "/home",
     elements: homePageElements     
 }
 
