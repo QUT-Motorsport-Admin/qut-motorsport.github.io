@@ -39,9 +39,12 @@ export default class App extends React.Component<{}, { html: String|undefined }>
         //const content = this.state.html ? this.state.html : <div>REACT APP! Loading MD...</div>
         return(
             <div>
-                <Navbar />
-                <Jumbo />
-                <Content/>
+                <Router>
+                    <div>
+                        <Navbar />
+                        <Route path="/home" component={Content}/>
+                    </div>
+                </Router>
                 <Footer />
             </div>
         )

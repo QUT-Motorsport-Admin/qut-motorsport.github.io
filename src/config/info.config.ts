@@ -1,4 +1,4 @@
-import PageElement from './site.config';
+import { PageElement } from './site.config';
 
 const infoPageElements: PageElement[] = [
     {
@@ -7,9 +7,8 @@ const infoPageElements: PageElement[] = [
     }
 ];
 
-
 const infoPageConfig = {
-    id: "IDPage",
+    id: "idPage",
     title: "Information",
     elements: infoPageElements     
 }

@@ -1,4 +1,4 @@
-import PageElement from "./site.config";
+import { PageElement } from "./site.config";
 
 const homePageElements: PageElement[] = [
     {
@@ -9,7 +9,7 @@ const homePageElements: PageElement[] = [
 
 
 const homePageConfig = {
-    id: "Home Page",
+    id: "homePage",
     title: "Home",
     elements: homePageElements     
 }

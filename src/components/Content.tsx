@@ -21,7 +21,7 @@ export default class Content extends React.Component<{}, { html: String|undefine
     // SetHTML wrapper, annoymised function (Arrow function), its the reason it works
     setHtml = (_html) => {
         this.setState({html: _html});
-        console.log(_html);
+        //console.log(_html);
     };
 
     render(){

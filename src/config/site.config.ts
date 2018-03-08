@@ -25,7 +25,7 @@ interface Page {
   pageComponents: any;
 }
 
-export default interface PageElement {
+export interface PageElement {
   type: string;
   config?: any;
 }
