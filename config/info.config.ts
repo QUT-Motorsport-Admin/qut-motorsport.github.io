@@ -4,6 +4,10 @@ const infoPageElements: PageElement[] = [
     {
       type: 'markdownDoc',
       config: '/info.header.md'
+    },
+    {
+        type: "spacer",
+        config: 50
     }
 ];
 
