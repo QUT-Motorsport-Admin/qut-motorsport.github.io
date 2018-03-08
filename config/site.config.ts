@@ -14,12 +14,6 @@ const siteConfig: Page[] = [
     title: infoPageConfig.title,
     path: infoPageConfig.path,
     pageComponents: infoPageConfig.elements
-  },
-  {
-    id: testPageConfig.id,
-    title: testPageConfig.title,
-    path: testPageConfig.path,
-    pageComponents: testPageConfig.elements
   }
 ]
 
