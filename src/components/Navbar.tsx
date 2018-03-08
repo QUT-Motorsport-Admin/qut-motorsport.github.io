@@ -2,7 +2,7 @@ import * as React from 'react';
 import "./Navbar.less";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import siteConfig from "../config/site.config";
+import siteConfig from "../../config/site.config";
 
 export default class Navbar extends React.Component {
 

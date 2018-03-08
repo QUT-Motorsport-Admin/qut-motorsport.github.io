@@ -1,30 +1,23 @@
+import { PageElement } from "./site.config";
 
-export const homePageElements: PageElement[] = [
+const homePageElements: PageElement[] = [
     {
-      type: 'markdownDoc',
-      config: './home.md'
+      type: 'jumbo'
     },
     {
       type: 'markdownDoc',
-      config: './home.md'
-    },
-    {
-      type: 'markdownDoc',
-      config: './home.md',
+      config: '/home.header.md'
     }
 ];
 
+
 const homePageConfig = {
-    id: "Home Page",
-    name: "Home",
+    id: "homePage",
+    title: "Home",
+    path: "/home",
     elements: homePageElements     
 }
 
 export default homePageConfig;
-
-interface PageElement {
-  type: string;
-  config?: any;
-}
 
 
