@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect, Switch } from "react-router-dom";
 
 //import the page set up object
 import mdHelp from "./helpers/mdHelp";
@@ -17,6 +17,8 @@ import Navbar from "./components/Navbar";
 import Jumbo from "./components/Jumbo";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
+import Spacer from "./components/spacer"
+import PageNotFound from "./components/pageNotFound";
 
 export default class App extends React.Component<{}, { html: String|undefined }> {
 
@@ -39,6 +41,9 @@ export default class App extends React.Component<{}, { html: String|undefined }>
                             else if (config.type == "jumbo"){
                                 return<Jumbo/>
                             }
+                            else if (config.type == "spacer"){
+                                return<Spacer height={config.config}/>
+                            }
                         })
                     )
                 }
@@ -52,10 +57,14 @@ export default class App extends React.Component<{}, { html: String|undefined }>
                 <Router>
                     <div>
                         <Navbar />
-                        {siteConfig.map(config => {
-                            //create routes and their respective components from the config set out in the siteConfig file
-                            return(<Route path={config.path} component={this.assembleContent(config.pageComponents)}/>)
-                        })}
+                        <Switch>
+                            {siteConfig.map(config => {
+                                //create routes and their respective components from the config set out in the siteConfig file
+                                return(<Route path={config.path} component={this.assembleContent(config.pageComponents)}/>)
+                            })}
+                            <Route exact path="/" render={() => (<Redirect to="/home" />)} />
+                            <Route component={PageNotFound}/>
+                        </Switch>
                     </div>
                 </Router>
                 <Footer />
