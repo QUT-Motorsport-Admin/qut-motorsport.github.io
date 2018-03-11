@@ -1,19 +1,18 @@
-import homePageConfig from "./home.config";
-import infoPageConfig from "./info.config";
-import testPageConfig from "./test.config";
+import homePageElements from "./home.config";
+import infoPageElements from "./info.config";
 
 const siteConfig: Page[] = [
   {
-    id: homePageConfig.id,
-    title: homePageConfig.title,
-    path: homePageConfig.path,
-    pageComponents: homePageConfig.elements
+    id: "homePage",
+    title: "Home",
+    path: "/home",
+    pageElements: homePageElements   
   },
   {
-    id: infoPageConfig.id,
-    title: infoPageConfig.title,
-    path: infoPageConfig.path,
-    pageComponents: infoPageConfig.elements
+    id: "infoPage",
+    title: "Information",
+    path: "/info",
+    pageElements: infoPageElements     
   }
 ]
 
@@ -23,7 +22,7 @@ interface Page {
   id: string;
   title: string;
   path: string;
-  pageComponents: any;
+  pageElements: any;
 }
 
 export interface PageElement {
