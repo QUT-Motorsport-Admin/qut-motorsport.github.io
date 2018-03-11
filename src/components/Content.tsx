@@ -16,7 +16,7 @@ export default class Content extends React.Component<{ path: string }, { html: S
 
     // When the component loads, fetch the string URL, and set the this.state.html with the return
     componentDidMount(){ 
-        mdHelp.fetch("config" + this.props.path, this.setHtml)
+        mdHelp.fetch("config/" + this.props.path, this.setHtml)
         //mdHelp.fetch("config/home.header.md", this.setHtml)
     }
     // SetHTML wrapper, annoymised function (Arrow function), its the reason it works

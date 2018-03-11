@@ -60,7 +60,7 @@ export default class App extends React.Component<{}, { html: String|undefined }>
                         <Switch>
                             {siteConfig.map(config => {
                                 //create routes and their respective components from the config set out in the siteConfig file
-                                return(<Route path={config.path} component={this.assembleContent(config.pageComponents)}/>)
+                                return(<Route path={config.path} component={this.assembleContent(config.pageElements)}/>)
                             })}
                             <Route exact path="/" render={() => (<Redirect to="/home" />)} />
                             <Route component={PageNotFound}/>

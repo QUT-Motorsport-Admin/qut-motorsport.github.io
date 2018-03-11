@@ -6,18 +6,8 @@ const homePageElements: PageElement[] = [
     },
     {
       type: 'markdownDoc',
-      config: '/home.header.md'
+      config: 'home.header.md'
     }
 ];
 
-
-const homePageConfig = {
-    id: "homePage",
-    title: "Home",
-    path: "/home",
-    elements: homePageElements     
-}
-
-export default homePageConfig;
-
-
+export default homePageElements;

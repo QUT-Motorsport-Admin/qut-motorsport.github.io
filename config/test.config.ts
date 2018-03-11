@@ -3,7 +3,7 @@ import { PageElement } from './site.config';
 const testPageElements: PageElement[] = [
     {
       type: 'markdownDoc',
-      config: '/test.header.md'
+      config: 'test.header.md'
     },
     {
       type: "jumbo"
